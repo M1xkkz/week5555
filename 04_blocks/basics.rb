@@ -3,7 +3,7 @@ foo = ['a', 'b', 'c']
 foo.each { puts "hello" }
 
 foo.each do
-  puts "hello"
+  puts "hello555"
 end
 
 def greet

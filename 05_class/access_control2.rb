@@ -47,6 +47,7 @@ person2 = Person.new("Bob", 25)
 # Trying to call a private method directly will result in an error
 # puts person1.secret
 
+
 # Trying to call a protected method directly will result in an error
 # person1.compare_age(person2)  # This will raise a NoMethodError
 # person1.share_secret
