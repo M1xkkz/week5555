@@ -4,5 +4,5 @@ def say_hello(name)
 end
 
 # call the method
-puts say_hello("Rick")
+puts say_hello("Mick")
 puts say_hello("Lori")
