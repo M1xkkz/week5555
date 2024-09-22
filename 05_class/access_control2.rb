@@ -5,8 +5,8 @@ class Person
 
   private :secret
 
-  # Initialize with name and age
-  def initialize(name, age)
+  # initiate with name and age
+  def initiate(name, age)
     @name = name
     @age = age
     @secret = "I scared of spiders."

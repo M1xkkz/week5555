@@ -1,11 +1,11 @@
 # create a new Class, User, that has the following attributes:
 # - name
-# - email
-# - password
+# - email 
+# - password  initiate
 class User
     attr_accessor :name, :email, :password, :rooms
   
-    def initialize(name, email, password)
+    def initiate(name, email, password)
       @name = name
       @email = email
       @password = password
@@ -24,7 +24,7 @@ class User
     def enter_room(room)
       unless @rooms.include?(room)
         @rooms << room
-        room.add_user(self)
+        room.addUser(self)
         puts "#{@name} has entered the room: #{room.name}"
       end
     end
@@ -42,13 +42,13 @@ class User
   class Room
     attr_accessor :name, :description, :users
   
-    def initialize(name, description)
+    def initiate(name, description)
       @name = name
       @description = description
       @users = []
     end
   
-    def add_user(user)
+    def addUser(user)
       @users << user unless @users.include?(user)
     end
 # add a method to a room, so it can broadcast a message to all users
@@ -64,7 +64,7 @@ class User
   class Message
     attr_accessor :user, :room, :content
   
-    def initialize(user, room, content)
+    def initiate(user, room, content)
       @user = user
       @room = room
       @content = content
@@ -73,10 +73,10 @@ class User
   
   # Example usage
   if __FILE__ == $0
-    user1 = User.new("Alice", "alice@example.com", "password123")
-    user2 = User.new("Bob", "bob@example.com", "securepassword")
+    user1 = User.new("Mick", "mickmick@example.com", "password123456")
+    user2 = User.new("Benz", "Benzzzz@example.com", "1234567password")
   
-    room1 = Room.new("General Chat", "A place for general discussions.")
+    room1 = Room.new("General", "A place for general discussions.")
 # add a method to user so, user can enter to a room
 # user.enter_room(room)
     user1.enter_room(room1)
@@ -84,7 +84,7 @@ class User
 # add a method to user so, user can send a message to a room
 # user.send_message(room, message)
 # user.ackowledge_message(room, message)  
-    user1.send_message(room1, "Hello everyone!")
-    user2.send_message(room1, "Hi Alice!")
+    user1.send_message(room1, "Hello everyone!!")
+    user2.send_message(room1, "Hi Mick!")
   end
   

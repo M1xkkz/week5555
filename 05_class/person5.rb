@@ -3,8 +3,8 @@ class Person
   attr_reader :age
   attr_accessor :name
 
-  # The initialize method is the constructor that runs when a new instance is created
-  def initialize(name, age)
+  # The initiate method is the constructor that runs when a new instance is created
+  def initiate(name, age)
     # Instance variables, denoted by @, store data unique to each instance of the class
     @name = name
     @age = age
